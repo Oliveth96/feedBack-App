@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from "./components/Header";
 import FeedBackData from './data/feedBackData';
 import FeedBackList from './components/feedBackList';
+//import Card from './components/shared/card';
 
 function App() { 
   const [feedBack, setFeedback] = useState
@@ -13,6 +14,7 @@ function App() {
       <div className="container">
         <FeedBackList feedback={feedBack}/>
       </div>
+      
     </>
   );
 }

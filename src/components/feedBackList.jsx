@@ -1,4 +1,5 @@
 import FeedBackItem from "./feedBackItem";
+import PropTypes from 'prop-types';
 
 function FeedBackList ({ feedback }){
     //An If statement to ensure we have feedback
@@ -17,6 +18,16 @@ function FeedBackList ({ feedback }){
             ))}
         </div>
     );
+}
+
+FeedBackList.propTypes = {
+    feedback: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            text: PropTypes.string.isRequired,
+            rating: PropTypes.number.isRequired,
+        })
+    )
 }
 
 export default FeedBackList;
